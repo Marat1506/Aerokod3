@@ -1,0 +1,19 @@
+.card{
+    border: 1px solid black;
+    width: 380px;
+    height: 442px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pice_now{
+    font-size: x-large;
+
+}
+
+.pice_old{
+    font-size: small;
+    align-self: flex-end;
+    text-decoration: line-through;
+}
