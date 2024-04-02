@@ -7,14 +7,12 @@ import { changeListFlats, changeNumberRooms, changeOptionProjectState } from '@/
 import SquareRegulation from './SquareRegulation';
 import { getFilterFats } from '@/request/request';
 import { useRouter } from 'next/router';
-import PriceRegulationMobile from './PriceRegulationMobile';
-import SquareRegulationMobile from './SquareRegulationMobile';
 
-type Props = {};
+
 
 const options = ['Все', 'Тестовый'];
 
-export default function HeaderMobileForm({ }: Props) {
+export default function HeaderMobileForm() {
     const router = useRouter();
     const [projectState, setProjectState] = useState(1);
     const dispatch = useAppDispatch();

@@ -1,12 +1,12 @@
 
 "use client"
 import React, { useState } from 'react';
-import { styled, alpha, Box, FormControl, InputLabel, Input, Typography, Stack, TextField } from '@mui/material';
+import { styled, alpha,  FormControl, Stack, TextField } from '@mui/material';
 import { Slider as BaseSlider, sliderClasses } from '@mui/base/Slider';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { changeListFlats, changePriceRoom, changeSquareRoom } from '@/hooks/reducer';
-import { getFilterFats, getFilterPriceFats } from '@/request/request';
+import { changeListFlats, changePriceRoom } from '@/hooks/reducer';
+import { getFilterFats } from '@/request/request';
 import { useAppSelector } from '@/hooks/hook';
 import { useRouter } from 'next/router';
 

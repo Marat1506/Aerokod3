@@ -4,9 +4,9 @@ import { Box } from '@mui/system'
 import React from 'react'
 import HeaderMobile from './HeaderMobile'
 import HeaderDesktop from './HeaderDesktop'
-type Props = {}
 
-export default function Header(props: Props) {
+
+export default function Header() {
 
     const isMobile = useMediaQuery('(max-width: 768px)')
   return (

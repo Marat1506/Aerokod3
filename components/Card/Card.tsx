@@ -2,23 +2,9 @@ import React from 'react'
 import styles from './Card.module.css'
 import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
 import Image from 'next/image'
+import { Props2 } from './types'
 
-interface Props {
-    floor: string,
-    id: number,
-    image: string,
-    old_price: string,
-    price: string,
-    project_title: string,
-    release_dates: string,
-    rooms: number,
-    square: string,
-    studio: boolean,
-}
 
-interface Props2 {
-    data: Props[]
-}
 
 export default function Card({ data }: Props2) {
     if (data) {

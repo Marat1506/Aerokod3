@@ -1,12 +1,12 @@
 
 "use client"
 import React, { useState } from 'react';
-import { styled, alpha, Box, FormControl, InputLabel, Input, Typography, Stack, TextField } from '@mui/material';
+import { styled, alpha, Box, FormControl, Stack, TextField } from '@mui/material';
 import { Slider as BaseSlider, sliderClasses } from '@mui/base/Slider';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeListFlats, changeSquareRoom } from '@/hooks/reducer';
-import { getFilterFats, getFilterSquareFats } from '@/request/request';
+import { getFilterFats } from '@/request/request';
 import { useAppSelector } from '@/hooks/hook';
 import { useRouter } from 'next/router';
 
@@ -83,9 +83,7 @@ export default function SquareRegulation({ min, max }: { min: number, max: numbe
   );
 }
 
-function valuetext(value: number) {
-  return `${value}°C`;
-}
+
 
 const blue = {
   100: '#DAECFF',

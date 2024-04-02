@@ -5,9 +5,9 @@ import ClearIcon from '@mui/icons-material/Clear';
 import { useAppDispatch, useAppSelector } from '@/hooks/hook';
 import { changeFilterOpen } from '@/hooks/reducer';
 
-type Props = {}
 
-export default function HeaderMobile({ }: Props) {
+
+export default function HeaderMobile() {
     const open = useAppSelector(state => state.fats.filterOpen)
     const dispatch = useAppDispatch()
     return (

@@ -5,28 +5,20 @@ import { getFats, getFilterFats, getFilterSquareFats } from '../../request/reque
 import { useAppDispatch, useAppSelector } from '@/hooks/hook';
 import { changeListFlats } from '@/hooks/reducer';
 import { useRouter } from 'next/router';
-type Props = {}
 
-export default function CardList(props: Props) {
+
+
+export default function CardList() {
     const dispatch = useAppDispatch()
     const data = useAppSelector(state => state.fats.listFlats)
-    const filterSquareRoom = useAppSelector(state => state.fats.squareRoom)
     const listFats = useAppSelector(state => state.fats.listFlats)
     const squareFilter = useAppSelector(state => state.fats.squareRoom);
     const priceFilter = useAppSelector(state => state.fats.priceRooms);
     const numberRooms = useAppSelector(state => state.fats.numberOfRooms);
     const router = useRouter();
-    const [currentPage, setCurrentPage] = useState(3); // Текущая страница
-    const [pageSize, setPageSize] = useState(20); // Размер страницы
-    const [fetchedFats, setFetchedFats] = useState([]);
+    const [currentPage, setCurrentPage] = useState(3);
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const data = await getFats()
-    //         dispatch(changeListFlats({ fats: data.data }))
-    //     }
-    //     fetchData()
-    // }, [])
+
 
 
     useEffect(() => {
