@@ -23,11 +23,11 @@ interface Props2 {
 export default function Card({ data }: Props2) {
     if (data) {
         return (
-            data.map((d, index) => ( // Добавляем параметр index для генерации уникальных ключей
-                <Box key={index} className={styles.card}> {/* Используем index в качестве ключа */}
+            data.map((d, index) => (
+                <Box key={index} className={styles.card}>
                     <Box className="flex justify-between p-[5px]">
                         <Box>
-                            {d.rooms == 0 ?  <Typography>{'Студия'}-комнатная {d.square}м²</Typography>:
+                            {d.rooms == 0 ?  <Typography>{'Студия'}  {d.square}м²</Typography>:
                             <Typography>{d.rooms}-комнатная {d.square}м²</Typography>}
                             
                             <Box className="flex align-bottom">
@@ -52,13 +52,13 @@ export default function Card({ data }: Props2) {
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    <TableRow key={d.id}> {/* Используем уникальный идентификатор элемента в качестве ключа */}
+                                    <TableRow key={d.id}>
                                         <TableCell component="th" scope="row">
                                             Этаж
                                         </TableCell>
                                         <TableCell align="right">{d.floor}</TableCell>
                                     </TableRow>
-                                    <TableRow key={d.id + '_release_date'}> {/* Добавляем некоторый уникальный суффикс к ключу */}
+                                    <TableRow key={d.id + '_release_date'}>
                                         <TableCell component="th" scope="row">
                                             Срок сдачи
                                         </TableCell>
